@@ -155,3 +155,6 @@ class DatabaseOperations(BaseDatabaseOperations):
 
     def datetime_trunc_sql(self, lookup_type, field_name, tzname):
         return "DATE_TRUNC(%s, %s)" % (lookup_type.upper(), field_name)
+
+    def conditional_expression_supported_in_where_clause(self, expression):
+        return False
